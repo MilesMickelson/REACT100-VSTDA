@@ -1,8 +1,148 @@
 /* You can add global styles to this file, and also import other style files */
+@headerfooter-color: #F5F5F5;
+@headerfooterfont-color: #343245;
+@cardbody-color: #FFFFFF;
+@addbutton-color: #5DB652;
+@darkfont-color: #34323F;
+@introbackground-color: #D9EDF8;
+@introfont-color: #547591;
+@lowbackground-color: #DEF0D6;
+@lowfont-color: #3D7637;
+@medbackground-color: #FBF8E1;
+@medfont-color: #876E35;
+@highbackground-color: #F1DEDE;
+@highfont-color: #A64641;
+
+//Add bold font weight to label elements and header 3(for welcome message in main body)
+//Add colors for priorities
+
 body {
   background: #136a8a; /* fallback for old browsers */
   background: -webkit-linear-gradient(to left, #b3e6eb, #6281c9);
   background: linear-gradient(to left, #b3e6eb, #6281c9);
+}
+
+.mainHeader {
+  color: white;
+  margin-top: .5em;
+  margin-bottom: .5em;;
+}
+
+.mainSubHeader {
+  color: white;
+  font-weight: light;
+  margin-bottom: .25em;
+}
+
+.lineBreak {
+  background-color: white;
+  height: .063em;
+  margin-bottom: 1.25em;
+}
+
+.card-header, .card-footer {
+  background-color: @headerfooter-color;
+  color: @headerfooterfont-color;
+}
+
+.inputCard, .itemsCard {
+  background-color: @cardbody-color;
+  color: @darkfont-color;
+}
+
+.toDoLabel, .priorityLabel {
+  font-weight: bold;
+}
+
+.create-todo {
+  border-radius: round;
+  width: 25.5em;
+  height: 3em;
+  background-color: @addbutton-color;
+  color: white;
+}
+
+.saveEditButton {
+  border-radius: round;
+  width: 4em;
+  height: 2.5em;
+  background-color: @addbutton-color;
+  color: white;
+}
+
+.card {
+  border-radius: round;
+}
+
+.itemsCard {
+  padding: 0em;
+  margin: 0em;
+}
+
+.welcomeCard {
+  color: @introfont-color;
+  background-color: @introbackground-color;
+}
+
+.welcomeCardHeader {
+  font-weight: bold;
+}
+
+.toDoItemCard {
+  width: 100%
+}
+
+.itemObjectRow {
+  margin: auto;
+  align-content: center;
+}
+
+.card-body.1 {
+  color: @lowfont-color !important;
+  background-color: @lowbackground-color !important;
+}
+
+.card-body.2 {
+  color: @medfont-color;
+  background-color: @medbackground-color;
+}
+
+.card-body.3  {
+  color: @highfont-color;
+  background-color: @highbackground-color;
+}
+
+.completeCheckBox {
+  margin: auto;
+  margin-left: 0.2em;
+}
+
+.itemDescription {
+  margin: auto;
+  margin-left: 1em;
+  font-weight: bold;
+  width: 48em;
+  max-width: 48em;
+  height: 1.25em;
+  max-height: 1.25em;
+}
+
+.edit-todo {
+  margin: auto;
+  margin-left: 0.5em;
+}
+
+.delete-todo {
+  margin-top: auto;
+  margin-left: 0.5em;
+}
+
+.update-todo {
+  margin-left: 51em;
+}
+
+.update-todo-priority {
+  width: 25em;
 }
 
 .no-padding {
@@ -30,10 +170,6 @@ textarea {
 
 strong + small {
     display: block;
-}
-
-input[type=checkbox] {
-  margin-right: 1em;
 }
 
 div.pull-right a {
