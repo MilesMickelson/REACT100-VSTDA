@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import ToDoItem from './ToDoItem.jsx';
+import ToDoListItem from './ToDoItem.jsx';
 
 class ItemsList extends Component {
   constructor (props){
@@ -20,9 +20,11 @@ class ItemsList extends Component {
         return (
         <div>
         {
-          this.props.toDoItems.map( toDoItem => {
-          return <ToDoItem key={toDoItem.key} data={toDoItem} edit={ () => this.props.handleEdit(toDoItem.key)}
-          delete={ () => this.props.handleDelete(toDoItem.key)} save={ () => this.props.addItem(toDoItem.key)}/>
+          this.props.toDoItems.map( ToDoItem => {
+          return <ToDoListItem key={ToDoItem.key} data={ToDoItem}
+          addItem={ () => this.props.addItem(ToDoItem.key)}
+          handleEdit={ () => this.props.handleEdit(ToDoItem.key)}
+          handleDelete={ () => this.props.handleDelete(ToDoItem.key)}/>
         })
         }
         </div>
@@ -32,4 +34,6 @@ class ItemsList extends Component {
 }
 
 export default ItemsList;
-
+          // addItem={ () => this.props.addItem(ToDoItem.key)}
+          // edit={ () => this.props.handleEdit(ToDoItem.key)}
+          // delete={ () => this.props.handleDelete(ToDoItem.key)}/>

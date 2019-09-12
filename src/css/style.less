@@ -56,8 +56,8 @@ body {
 
 .create-todo {
   border-radius: round;
-  width: 25.5em;
-  height: 3em;
+  width: 95%;
+  height: 95%;
   background-color: @addbutton-color;
   color: white;
 }
@@ -75,6 +75,11 @@ body {
 }
 
 .itemsCard {
+  padding: 0em;
+  margin: 0em;
+}
+
+.toDoItemCard {
   padding: 0em;
   margin: 0em;
 }
@@ -97,48 +102,46 @@ body {
   align-content: center;
 }
 
-.card-body.1 {
-  color: @lowfont-color !important;
-  background-color: @lowbackground-color !important;
+.card-body.low {
+  color: @lowfont-color;
+  background-color: @lowbackground-color;
 }
 
-.card-body.2 {
+.card-body.med {
   color: @medfont-color;
   background-color: @medbackground-color;
 }
 
-.card-body.3  {
+.card-body.high  {
   color: @highfont-color;
   background-color: @highbackground-color;
 }
 
 .completeCheckBox {
-  margin: auto;
   margin-left: 0.2em;
 }
 
 .itemDescription {
-  margin: auto;
-  margin-left: 1em;
+  margin-left: 0.5em;
   font-weight: bold;
-  width: 48em;
-  max-width: 48em;
+  width: 85%;
+  max-width: 85%;
   height: 1.25em;
   max-height: 1.25em;
 }
 
 .edit-todo {
-  margin: auto;
   margin-left: 0.5em;
+  background-color: gray;
 }
 
 .delete-todo {
-  margin-top: auto;
-  margin-left: 0.5em;
+  margin-left: 1em;
+  background-color: red;
 }
 
 .update-todo {
-  margin-left: 51em;
+  margin-left: 88%;
 }
 
 .update-todo-priority {

@@ -11,12 +11,12 @@ class App extends Component {
       key: 0,
       itemPriority: '0',
       itemDescription: "",
-      isCompleted: false,
+      isComplete: false,
       isEditing: false
       }]
     };
-    this.handleEdit = this.handleEdit.bind(this);
     this.addItem = this.addItem.bind(this);
+    this.handleEdit = this.handleEdit.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
   }
 
@@ -43,7 +43,7 @@ class App extends Component {
         itemPriority: "0",
         itemDescription: "",
         key: currentKey,
-        isCompleted: false,
+        isComplete: false,
         isEditing: false
       })
     document.getElementById("itemDescription" + key).value = "";
@@ -57,11 +57,11 @@ class App extends Component {
   }
 
   handleEdit(key) {
-    let toDoItems = this.state.toDoItems.map( ToDoItem => {
-      if (ToDoItem.key === key){
-        ToDoItem.isEditing = true;
+    let toDoItems = this.state.toDoItems.map( ToDoListItem => {
+      if (ToDoListItem.key === key){
+        ToDoListItem.isEditing = true;
       }
-      return ToDoItem;
+      return ToDoListItem;
     })
     this.setState ({
       toDoItems: toDoItems
@@ -69,16 +69,11 @@ class App extends Component {
   }
 
   handleDelete(key) {
-    let toDoItems = this.state.toDoItems.filter( ToDoItem => {
-      return ToDoItem.key !== key;
+    let toDoItems = this.state.toDoItems.filter( ToDoListItem => {
+      return ToDoListItem.key !== key;
     })
     this.setState ({
       toDoItems: toDoItems
-    });
-  }
-
-  handleCompletion() {
-    this.setState ({
     });
   }
 
@@ -98,8 +93,8 @@ class App extends Component {
               <div className="card-header">View To-Do's</div>
                 <div className={`${ "card-body" } ${ "itemsCard" }`}>
                     <ItemsList toDoItems={this.state.toDoItems.slice(0, this.state.toDoItems.length-1)}
-                    edit={this.state.handleEdit} delete={this.state.handleDelete}
-                    save={this.state.addItem}/>
+                    addItem={this.addItem} handleEdit={this.handleEdit}
+                    handleDelete={this.handleDelete}/>
                 </div>
               </div>
             </div>
@@ -110,3 +105,7 @@ class App extends Component {
 }
 
 export default App;
+
+// addItem={ () => this.addItem(this.state.currentKey)}
+//                     edit={ () => this.state.handleEdit(ToDoItem.key)}
+//                     delete={ () => this.state.handleDelete(ToDoItem.key)}/>

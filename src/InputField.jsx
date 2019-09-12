@@ -17,11 +17,11 @@ class InputField extends Component {
           </div>
           <div className="form-group">
             <label className="priorityLabel" htmlFor="itemPriority">How much of a priority is this?</label>
-            <select className={`${ "form-control" } ${ "create-todo-priority" }`} id={"itemPriority" + this.props.toDoItems.key}>
+            <select className={`${ "create-todo-priority" } ${ "form-control" }`} id={"itemPriority" + this.props.toDoItems.key}>
               <option value="0">Select a Priority</option>
-              <option className="lowPriorityItem" value="1">Low Priority</option>
-              <option className="medPriorityItem" value="2">Medium Priority</option>
-              <option className="highPriorityItem" value="3">High Priority</option>
+              <option value="low">Low Priority</option>
+              <option value="med">Medium Priority</option>
+              <option value="high">High Priority</option>
             </select>
           </div>
         </div>
