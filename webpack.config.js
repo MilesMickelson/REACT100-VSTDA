@@ -20,7 +20,7 @@ module.exports = {
   },
 
   module: {
-    loader: [
+    rules: [
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
