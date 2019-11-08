@@ -9,7 +9,7 @@ class InputField extends Component {
       return (
         <div className="card">
         <div className="card-header">Add New To-Do</div>
-        <div className={`${ "card-body" } ${ "inputCard" }`}>
+        <div className="card-body inputCard">
           <div className="form-group">
             <label className="toDoLabel" htmlFor="itemDescription">I want to..</label>
             <textarea className={`${ "form-control" } ${ "create-todo-text" }`} id={"itemDescription" + this.props.toDoItems.key}>

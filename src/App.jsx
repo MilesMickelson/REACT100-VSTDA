@@ -106,6 +106,3 @@ class App extends Component {
 
 export default App;
 
-// addItem={ () => this.addItem(this.state.currentKey)}
-//                     edit={ () => this.state.handleEdit(ToDoItem.key)}
-//                     delete={ () => this.state.handleDelete(ToDoItem.key)}/>
