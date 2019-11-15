@@ -34,6 +34,3 @@ class ItemsList extends Component {
 }
 
 export default ItemsList;
-          // addItem={ () => this.props.addItem(ToDoItem.key)}
-          // edit={ () => this.props.handleEdit(ToDoItem.key)}
-          // delete={ () => this.props.handleDelete(ToDoItem.key)}/>
