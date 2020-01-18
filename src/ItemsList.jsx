@@ -3,7 +3,7 @@ import ToDoListItem from './ToDoItem.jsx';
 
 class ItemsList extends Component {
   constructor (props){
-    super (props)
+    super (props);
   }
 
   render() {
@@ -15,9 +15,9 @@ class ItemsList extends Component {
             <div>Get started now by adding a todo on the left.</div>
           </div>
         </div>
-        )
-        } else {
-        return (
+      )
+    } else {
+      return (
         <div>
         {
           this.props.toDoItems.map( ToDoItem => {
@@ -25,10 +25,10 @@ class ItemsList extends Component {
           addItem={ () => this.props.addItem(ToDoItem.key)}
           handleEdit={ () => this.props.handleEdit(ToDoItem.key)}
           handleDelete={ () => this.props.handleDelete(ToDoItem.key)}/>
-        })
+          })
         }
         </div>
-      )
+      );
     }
   }
 }
